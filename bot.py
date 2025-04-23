@@ -8,7 +8,8 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import ChatType
 from aiogram.utils import executor
 
-API_TOKEN = 'YOUR_BOT_TOKEN_HERE'  # <-- ВСТАВЬ СЮДА СВОЙ ТОКЕН
+import os
+API_TOKEN = os.getenv("API_TOKEN")  # <-- ВСТАВЬ СЮДА СВОЙ ТОКЕН
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
